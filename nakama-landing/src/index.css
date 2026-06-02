@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #2f3d4f;
+  background-color: #ffffff;
+  font-weight: 300;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 86px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #2d2d2d;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 38px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+/* HERO */
+
+.hero {
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s ease;
+}
+
+/* INTRO */
+
+.intro {
+  padding: 60px 20px 88px;
+  background: white;
+  text-align: center;
+}
+
+.intro h1 {
+  max-width: 980px;
+  margin: 0 auto 32px;
+
+  font-size: 39px;
+  line-height: 1.15;
+  font-weight: 300;
+
+  letter-spacing: 0.5px;
+
+  color: #39485c;
+}
+
+.intro p {
+  max-width: 720px;
+  margin: 12px auto;
+
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 300;
+
+  color: #4c4c4c;
+}
+
+
+/* SECCIONES GENERALES */
+
+.section {
+  padding: 90px 20px;
+  text-align: center;
+  background: white;
+}
+
+.section.light {
+  background: #f1f1f1;
+}
+
+.section h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 6px;
+  margin-bottom: 28px;
+  color: #39485c;
+}
+
+.section p {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #4b4b4b;
+}
+
+/* PROYECTOS */
+
+.projects {
+  padding: 90px 60px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 7px;
+  color: #39485c;
+  margin-bottom: 50px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.projectCard {
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.projectCard:hover img {
+  transform: scale(1.08);
+}
+
+.projectOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(70, 70, 70, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.projectOverlay p {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 1;
+}
+
+.btn {
+  margin-top: 45px;
+  background: #39485c;
+  color: white;
+  border: none;
+  padding: 15px 45px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* COLLECTION */
+
+.collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 650px;
+}
+
+.collectionImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collectionContent {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.collectionContent span {
+  letter-spacing: 4px;
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.collectionContent h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 6px;
+  color: #39485c;
+  margin-bottom: 35px;
+}
+
+.collectionContent p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.collectionContent h3 {
+  margin-top: 20px;
+  font-weight: 300;
+  color: #39485c;
+  letter-spacing: 1px;
+}
+
+/* FILOSOFÍA */
+
+.philosophy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 620px;
+  background: white;
+}
+
+.philosophyContent {
+  padding: 90px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.japaneseWord {
+  font-size: 82px;
+  color: #39485c;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.philosophy h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 6px;
+  color: #39485c;
+  margin-bottom: 35px;
+}
+
+.philosophy p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #4b4b4b;
+  margin-bottom: 24px;
+  max-width: 620px;
+}
+
+.philosophyImage {
+  height: 100%;
+  min-height: 620px;
+}
+
+.philosophyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TECHNOLOGY */
+
+.technology {
+  padding: 100px 60px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.technology h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 6px;
+  color: #39485c;
+  margin-bottom: 60px;
+}
+
+.technologyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.technologyCard {
+  background: white;
+  text-align: left;
+  overflow: hidden;
+}
+
+.technologyCard img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.technologyCard div {
+  padding: 30px;
+}
+
+.technologyCard h3 {
+  color: #39485c;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.technologyCard p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* PROCESS */
+
+.process {
+  padding: 100px 60px;
+  background: #ffffff;
+}
+
+.processHeader {
+  max-width: 780px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.processHeader span {
+  display: block;
+  letter-spacing: 4px;
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.processHeader h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 6px;
+  color: #39485c;
+  margin-bottom: 26px;
+}
+
+.processHeader p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.processCard {
+  border: 1px solid #e1e1e1;
+  padding: 36px 28px;
+  min-height: 260px;
+  background: #fafafa;
+}
+
+.processCard span {
+  display: block;
+  font-size: 38px;
+  color: #39485c;
+  font-weight: 200;
+  margin-bottom: 28px;
+}
+
+.processCard h3 {
+  color: #39485c;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.processCard p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* CONTACTO */
+
+.contactSection {
+  position: relative;
+  padding: 110px 20px;
+  background: #39485c;
+  color: white;
+  text-align: center;
+}
+
+.contactContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contactContent span {
+  display: block;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 22px;
+  color: #d6d6d6;
+}
+
+.contactContent h2 {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
+}
+
+.contactContent p {
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 42px;
+  color: #f2f2f2;
+}
+
+.contactButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primaryButton,
+.secondaryButton {
+  text-decoration: none;
+  padding: 16px 34px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.primaryButton {
+  background: white;
+  color: #39485c;
+}
+
+.secondaryButton {
+  border: 1px solid white;
+  color: white;
+}
+
+.whatsappFloat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* FOOTER */
+
+.footer {
+  background: #39485c;
+  color: white;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .intro {
+    padding: 70px 20px 90px;
+  }
+
+  .intro h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+
+  .projects {
+    padding: 70px 20px;
+  }
+
+  .projects h2,
+  .collectionContent h2,
+  .philosophy h2,
+  .technology h2,
+  .processHeader h2,
+  .contactContent h2 {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection {
+    grid-template-columns: 1fr;
+  }
+
+  .collectionContent {
+    padding: 60px 25px;
+  }
+
+  .philosophy {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophyContent {
+    padding: 70px 24px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .japaneseWord {
+    font-size: 64px;
+  }
+
+  .philosophyImage {
+    min-height: 420px;
+  }
+
+  .technology {
+    padding: 70px 20px;
+  }
+
+  .technologyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .process {
+    padding: 70px 20px;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactButtons {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .whatsappFloat {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
