@@ -1,5 +1,7 @@
 import "./index.css";
 
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import Projects from "./components/Projects";
@@ -9,12 +11,22 @@ import Technology from "./components/Technology";
 import Process from "./components/Process";
 import Contact from "./components/Contact";
 
-function App() {
+import Cocinas from "./pages/Cocinas";
+import Playroom from "./pages/Playroom";
+import Placards from "./pages/Placards";
+import Habitaciones from "./pages/Habitaciones";
+
+
+function Home() {
+
   return (
+
     <>
+
       <Navbar />
 
       <main>
+
         <HeroSlider />
 
         <Projects />
@@ -28,14 +40,71 @@ function App() {
         <Process />
 
         <Contact />
+
       </main>
 
+
       <footer className="footer">
+
         <p>nakama</p>
-        <p>Diseño y fabricación de muebles a medida</p>
+
+        <p>
+          Diseño y fabricación de muebles a medida
+        </p>
+
       </footer>
+
+
     </>
+
   );
+
 }
+
+
+
+function App() {
+
+  return (
+
+    <Routes>
+
+
+      <Route 
+        path="/" 
+        element={<Home />} 
+      />
+
+
+      <Route 
+        path="/cocinas" 
+        element={<Cocinas />} 
+      />
+
+
+      <Route 
+        path="/playroom" 
+        element={<Playroom />} 
+      />
+
+
+      <Route 
+        path="/placards" 
+        element={<Placards />} 
+      />
+
+
+      <Route 
+        path="/habitaciones" 
+        element={<Habitaciones />} 
+      />
+
+
+    </Routes>
+
+  );
+
+}
+
 
 export default App;

@@ -25,20 +25,21 @@ function Collection() {
 
 
                 <h2>
-                    COLECCIÓN
+                    PROYECTOS
                 </h2>
 
 
                 <p>
-                    Entendemos que el diseño contemporáneo ha expandido
-                    sus fronteras. Hoy, la inspiración puede nacer de un
-                    trazo arquitectónico, un plano técnico o un concepto digital.
+                    Entendemos que el diseño contemporáneo ha expandido sus fronteras.
+                    Hoy, la inspiración puede nacer de un trazo arquitectónico, un plano
+                    técnico o un concepto digital o IA.
+                    
                 </p>
 
 
                 <p>
                     Interpretamos volúmenes, resolvemos desafíos estructurales
-                    y seleccionamos materiales nobles para que cada proyecto
+                    y seleccionamos materiales para que cada proyecto
                     conserve su integridad estética.
                 </p>
 

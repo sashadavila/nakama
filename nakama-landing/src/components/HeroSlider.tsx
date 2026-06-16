@@ -4,6 +4,7 @@ const images = [
     "/images/hero-1.jpg",
     "/images/hero-2.jpg",
     "/images/hero-3.jpg",
+    "/images/hero-4.jpg"
 ];
 
 
@@ -45,20 +46,20 @@ function HeroSlider() {
             <section className="intro">
 
                 <h1>
-                    Desarrollamos muebles a medida que convierten tu visión
-                    en una experiencia única.
+                    Desarrollamos mobiliarios a medida con identidad dándole vida a tu
+visión
                 </h1>
 
 
                 <p>
-                    Materializamos la excelencia en cada detalle, con precisión,
-                    innovación y tecnología de fabricación de última generación.
+                    Combinamos precisión artesanal e innovación tecnológica para cuidar
+cada detalle.
                 </p>
 
 
                 <p>
-                    Cada proyecto es único, nuestra misión es superar tus expectativas
-                    al lograr el espacio soñado.
+                    Creamos espacios únicos. Nuestra meta es superar lo que imaginaste y
+materializar el entorno de tus sueños.
                 </p>
 
 
