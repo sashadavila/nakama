@@ -1,9 +1,9 @@
-import corte1 from "../assets/images/corte.png";
-import corte2 from "../assets/images/corte (2).png";
-import cnc1 from "../assets/images/cnc.png";
-import cnc2 from "../assets/images/cnc (2).png";
-import laqueado1 from "../assets/images/laqueado1.png";
-import laqueado2 from "../assets/images/laqueado (2).png";
+import corte1 from "../assets/images/Imagen1.jpg";
+import corte2 from "../assets/images/corte2.png";
+import cnc1 from "../assets/images/1.jpg";
+import cnc2 from "../assets/images/Imagen2.jpg";
+import laqueado1 from "../assets/images/1 (1).jpg";
+import laqueado2 from "../assets/images/2.jpg";
 
 const processes = [
   {
