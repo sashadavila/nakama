@@ -21,7 +21,7 @@ function HeroSlider() {
                 prev === images.length - 1 ? 0 : prev + 1
             );
 
-        }, 2000);
+        }, 3000);
 
 
         return () => clearInterval(interval);

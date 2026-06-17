@@ -36,8 +36,8 @@ const projects = [
 
     {
         id: 4,
-        title: "Habitaciones",
-        link: "/habitaciones",
+        title: "Dormitorios",
+        link: "/dormitorios",
         images: [
             habitacionImg,
         ],

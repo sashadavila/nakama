@@ -23,8 +23,7 @@ function Philosophy() {
                     Nakama significa colega, compañero o amigo. Evoca un vínculo profundo,
                     basado en la confianza, la colaboración y un verdadero sentido de pertenencia.
                     Esa es, exactamente nuestra historia.
-                    Somos Leo y Dario, los fundadores y socios detrás de este proyecto, somos
-                    nakamas de la vida.
+                    Somos Leo y Dario, los fundadores y socios detrás de este proyecto.
                 </p>
 
                 <p>

@@ -30,10 +30,8 @@ function Collection() {
 
 
                 <p>
-                    Entendemos que el diseño contemporáneo ha expandido sus fronteras.
-                    Hoy, la inspiración puede nacer de un trazo arquitectónico, un plano
-                    técnico o un concepto digital o IA.
-                    
+                    Entendemos que el diseño contemporaneo ha expandido sus fronteras. Hoy la inspiración puede nacer de un trazo arquitectónico, un plano técnico o un diseño de IA.
+
                 </p>
 
 
@@ -45,7 +43,7 @@ function Collection() {
 
 
                 <h3>
-                    Usted proyecta la idea; nosotros la hacemos realidad.
+                    Proyecta tu idea y nosotros la hacemos realidad.
                 </h3>
 
 
