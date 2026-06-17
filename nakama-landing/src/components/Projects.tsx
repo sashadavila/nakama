@@ -1,115 +1,80 @@
 import { useState } from "react";
 
-import cocinaImg from "../assets/coleccion/cocina/cocina1-1.jpeg";
-import playroomImg from "../assets/coleccion/playroom/playroom (1).jpeg";
-import placardImg from "../assets/coleccion/placard-habitaciones/placard1.jpeg";
-import habitacionImg from "../assets/coleccion/placard-habitaciones/dormitorio1.jpeg";
+import cocinaImg from "../assets/coleccion/cocina/cocinaportada.jpeg";
+import playroomImg from "../assets/coleccion/playroom/PlayRoomsportada.jpeg";
+import placardImg from "../assets/coleccion/placard-habitaciones/Vestidoresportada.jpeg";
+import dormitorioImg from "../assets/coleccion/placard-habitaciones/dormitorioportada.jpeg";
+import comercialesImg from "../assets/coleccion/comerciales/comerciales.jpg";
+import vanitoyImg from "../assets/coleccion/vanitory/Vanitoryportada.jpeg";
 
 
-const projects = [
+const mainProjects = [
+
     {
-        id: 1,
-        title: "Playroom",
-        link: "/playroom",
-        images: [
-            playroomImg,
-        ],
+        id:1,
+        title:"Mobiliario de cocina",
+        link:"/cocinas",
+        image:cocinaImg,
     },
 
     {
-        id: 2,
-        title: "Cocinas",
-        link: "/cocinas",
-        images: [
-            cocinaImg,
-        ],
+        id:2,
+        title:"Placares / Vestidores",
+        link:"/placards",
+        image:placardImg,
     },
 
     {
-        id: 3,
-        title: "Placards",
-        link: "/placards",
-        images: [
-            placardImg,
-        ],
+        id:3,
+        title:"Play room",
+        link:"/playroom",
+        image:playroomImg,
     },
 
-    {
-        id: 4,
-        title: "Dormitorios",
-        link: "/dormitorios",
-        images: [
-            habitacionImg,
-        ],
-    },
 ];
+
+
+
+const extraProjects = [
+
+    {
+        id:4,
+        title:"Dormitorios",
+        link:"/habitaciones",
+        image:dormitorioImg,
+    },
+
+    {
+        id:5,
+        title:"Comerciales",
+        link:"#",
+        image:comercialesImg,
+    },
+
+    {
+        id:6,
+        title:"Vanitori",
+        link:"#",
+        image:vanitoyImg,
+    },
+
+];
+
 
 
 function Projects() {
 
 
-    const [currentImages, setCurrentImages] = useState(
-        projects.map(() => 0)
-    );
+    const [showMore, setShowMore] = useState(false);
 
 
-
-    const nextImage = (
-        e: React.MouseEvent,
-        index: number
-    ) => {
-
-        e.preventDefault();
-        e.stopPropagation();
-
-
-        setCurrentImages(prev => {
-
-            const copy = [...prev];
-
-            copy[index] =
-                (copy[index] + 1)
-                %
-                projects[index].images.length;
-
-            return copy;
-
-        });
-
-    };
-
-
-
-    const prevImage = (
-        e: React.MouseEvent,
-        index: number
-    ) => {
-
-
-        e.preventDefault();
-        e.stopPropagation();
-
-
-        setCurrentImages(prev => {
-
-            const copy = [...prev];
-
-            copy[index] =
-                copy[index] === 0
-                    ? projects[index].images.length - 1
-                    : copy[index] - 1;
-
-
-            return copy;
-
-        });
-
-    };
+    const projects = showMore
+        ? [...mainProjects, ...extraProjects]
+        : mainProjects;
 
 
 
     return (
-
 
         <section
             id="proyectos"
@@ -117,7 +82,9 @@ function Projects() {
         >
 
 
-            <h2>COLECCIÓN</h2>
+            <h2>
+                COLECCIÓN
+            </h2>
 
 
 
@@ -125,7 +92,7 @@ function Projects() {
 
 
                 {
-                    projects.map((project, index) => (
+                    projects.map((project)=>(
 
 
                         <a
@@ -136,36 +103,9 @@ function Projects() {
 
 
                             <img
-                                src={
-                                    project.images[
-                                        currentImages[index]
-                                    ]
-                                }
-
+                                src={project.image}
                                 alt={project.title}
                             />
-
-
-
-                            <button
-                                className="arrow left"
-                                onClick={(e) =>
-                                    prevImage(e, index)
-                                }
-                            >
-                                ‹
-                            </button>
-
-
-
-                            <button
-                                className="arrow right"
-                                onClick={(e) =>
-                                    nextImage(e, index)
-                                }
-                            >
-                                ›
-                            </button>
 
 
 
@@ -178,7 +118,6 @@ function Projects() {
                             </div>
 
 
-
                         </a>
 
 
@@ -186,12 +125,25 @@ function Projects() {
                 }
 
 
-
             </div>
 
 
-        </section>
 
+            <button
+                className="btn"
+                onClick={() => setShowMore(!showMore)}
+            >
+
+                {
+                    showMore
+                    ? "VER MENOS"
+                    : "VER MÁS"
+                }
+
+            </button>
+
+
+        </section>
 
     );
 
