@@ -13,7 +13,7 @@ function Contact() {
 
                 <div className="contactButtons">
                     <a
-                        href="https://wa.me/549XXXXXXXXXX"
+                        href="https://wa.me/5491135566477"
                         target="_blank"
                         rel="noreferrer"
                         className="primaryButton"
@@ -21,14 +21,14 @@ function Contact() {
                         ESCRIBIR POR WHATSAPP
                     </a>
 
-                    <a href="mailto:contacto@nakama.com" className="secondaryButton">
+                    <a href="mailto:Info@mobiliariosnakama.com" className="secondaryButton">
                         ENVIAR EMAIL
                     </a>
                 </div>
             </div>
 
             <a
-                href="https://wa.me/549XXXXXXXXXX"
+                href="https://wa.me/5491135566477"
                 target="_blank"
                 rel="noreferrer"
                 className="whatsappFloat"
