@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import corte1 from "../assets/images/corte.png";
 import corte2 from "../assets/images/corte (2).png";
 import cnc1 from "../assets/images/cnc.png";
@@ -26,16 +24,6 @@ const processes = [
 ];
 
 function Technology() {
-  const [imageIndex, setImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="technology">
       <h2>NUESTROS PROCESOS</h2>
@@ -43,19 +31,19 @@ function Technology() {
       <div className="technologyGrid">
         {processes.map((item) => (
           <article className="technologyCard" key={item.title}>
-            <div className="technologyImageSlider">
-              <div
-                className="technologyImageTrack"
-                style={{
-                  transform: `translateX(-${imageIndex * 50}%)`,
-                }}
-              >
-                <img src={item.images[0]} alt={item.title} />
-                <img src={item.images[1]} alt={item.title} />
-              </div>
-            </div>
+            <img
+              className="technologyImage baseImage"
+              src={item.images[0]}
+              alt={item.title}
+            />
 
-            <div className="technologyText">
+            <img
+              className="technologyImage hoverImage"
+              src={item.images[1]}
+              alt={item.title}
+            />
+
+            <div className="technologyOverlay">
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </div>

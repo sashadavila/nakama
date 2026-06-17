@@ -127,7 +127,7 @@ body {
 /* COLECCIÓN */
 
 .projects {
-  padding: 90px 60px;
+  padding: 90px 8%;
   background: #f4f4f4;
   text-align: center;
 }
@@ -142,12 +142,17 @@ body {
 }
 
 
+
 /* CONTENEDOR */
 
 .projectsGrid {
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
 }
 
 
@@ -155,31 +160,48 @@ body {
 /* CARD */
 
 .projectCard {
-  height: 430px;
+
+  height: 390px;
+
   position: relative;
+
   overflow: hidden;
+
   display: block;
+
   cursor: pointer;
+
   text-decoration: none;
+
   background: #ddd;
+
 }
 
 
 .projectCard img {
+
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
-  transition: .5s ease;
+
+  transition: .6s ease;
+
 }
 
 
+
 .projectCard:hover img {
-  transform: scale(1.08);
+
+  transform: scale(1.07);
+
 }
 
 
 
 /* OSCURECIDO + TITULO */
+
 
 .projectOverlay {
 
@@ -187,7 +209,7 @@ body {
 
   inset: 0;
 
-  background: rgba(70, 70, 70, 0.45);
+  background: rgba(57, 72, 92, .45);
 
   display: flex;
 
@@ -199,16 +221,15 @@ body {
 
   transition: .4s ease;
 
-  z-index: 2;
-
 }
+
 
 
 .projectOverlay p {
 
   color: white;
 
-  font-size: 18px;
+  font-size: 19px;
 
   font-weight: 300;
 
@@ -216,7 +237,10 @@ body {
 
   text-transform: uppercase;
 
+  padding: 0 20px;
+
 }
+
 
 
 .projectCard:hover .projectOverlay {
@@ -227,9 +251,48 @@ body {
 
 
 
+/* BOTON VER MÁS */
+
+
+.projects .btn {
+
+  margin-top: 45px;
+
+  padding: 15px 45px;
+
+  background: transparent;
+
+  border: 1px solid #39485c;
+
+  color: #39485c;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+
+}
+
+
+
+.projects .btn:hover {
+
+  background:#39485c;
+
+  color:white;
+
+}
+
+
+
 /* RESPONSIVE */
 
-@media(max-width:1100px){
+
+@media(max-width:1000px){
+
 
   .projectsGrid {
 
@@ -237,7 +300,9 @@ body {
 
   }
 
+
 }
+
 
 
 @media(max-width:650px){
@@ -250,6 +315,7 @@ body {
   }
 
 
+
   .projectsGrid {
 
     grid-template-columns:1fr;
@@ -257,11 +323,13 @@ body {
   }
 
 
+
   .projectCard {
 
-    height:380px;
+    height:360px;
 
   }
+
 
 }
 
@@ -549,6 +617,7 @@ body {
 }
 
 /* NUESTROS PROCESOS */
+/* NUESTROS PROCESOS */
 
 .technology {
   padding: 100px 60px;
@@ -571,48 +640,99 @@ body {
 }
 
 .technologyCard {
-  background: white;
+  height: 430px;
+  position: relative;
   overflow: hidden;
+  background: #111;
 }
 
-.technologyImageSlider {
+.technologyImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 235px;
-  overflow: hidden;
-}
-
-.technologyImageTrack {
-  width: 200%;
-  height: 100%;
-  display: flex;
-  transition: transform 0.9s ease;
-}
-
-.technologyImageTrack img {
-  width: 50%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.technologyText {
-  padding: 32px 28px 38px;
+.baseImage {
+  opacity: 1;
+}
+
+.hoverImage {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.technologyCard:hover .baseImage {
+  opacity: 0;
+}
+
+.technologyCard:hover .hoverImage {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.technologyOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92),
+    rgba(0, 0, 0, 0.45)
+  );
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   text-align: left;
+
+  padding: 42px 38px;
+
+  z-index: 2;
 }
 
-.technologyText h3 {
-  font-size: 22px;
+.technologyOverlay h3 {
+
+  font-size: 28px;
+
   font-weight: 300;
+
   letter-spacing: 2px;
-  color: #39485c;
+
   margin-bottom: 18px;
+
+  color: #ffffff;
+
+}
+.technologyOverlay p {
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  font-weight: 300;
+
+  color: #ffffff;
+
+  max-height: 0;
+
+  opacity: 0;
+
+  overflow: hidden;
+
+  transition: max-height .5s ease, opacity .4s ease;
+
 }
 
-.technologyText p {
-  font-size: 15px;
-  line-height: 1.8;
-  font-weight: 300;
-  color: #555;
+.technologyCard:hover .technologyOverlay p {
+  max-height: 260px;
+  opacity: 1;
 }
 
 @media (max-width: 950px) {
@@ -620,8 +740,8 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .technologyImageSlider {
-    height: 300px;
+  .technologyCard {
+    height: 390px;
   }
 }
 
@@ -630,10 +750,17 @@ body {
     padding: 80px 25px;
   }
 
-  .technologyImageSlider {
-    height: 240px;
+  .technologyCard {
+    height: 360px;
   }
-}/* PROCESS */
+
+  .technologyOverlay {
+    padding: 32px 26px;
+  }
+}
+
+
+/* PROCESS */
 
 .process {
   padding: 100px 60px;
