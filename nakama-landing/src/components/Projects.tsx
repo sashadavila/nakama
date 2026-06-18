@@ -47,7 +47,7 @@ const extraProjects = [
     {
         id:5,
         title:"Comerciales",
-        link:"#",
+        link:"/comerciales",
         image:comercialesImg,
     },
 

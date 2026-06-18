@@ -15,7 +15,7 @@ import Cocinas from "./pages/Cocinas";
 import Playroom from "./pages/Playroom";
 import Placards from "./pages/Placards";
 import Habitaciones from "./pages/Habitaciones";
-
+import Comerciales from "./pages/Comerciales";
 
 function Home() {
 
@@ -98,6 +98,11 @@ function App() {
         path="/habitaciones" 
         element={<Habitaciones />} 
       />
+
+      <Route 
+  path="/comerciales" 
+  element={<Comerciales />} 
+/>
 
 
     </Routes>
