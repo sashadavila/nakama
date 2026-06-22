@@ -918,6 +918,53 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+.contactForm {
+  margin: 45px auto 35px;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  font-family: inherit;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contactForm textarea {
+  height: 130px;
+  resize: none;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.contactForm button {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.successMessage {
+  color: white;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-size: 14px;
+}
 /* FOOTER */
 
 .footer {
