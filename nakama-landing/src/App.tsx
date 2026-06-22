@@ -17,6 +17,7 @@ import Placards from "./pages/Placards";
 import Habitaciones from "./pages/Habitaciones";
 import Comerciales from "./pages/Comerciales";
 import Vanitory from "./pages/Vanitory";
+import RackDeTv from "./pages/RackDeTv";
 function Home() {
 
   return (
@@ -108,6 +109,11 @@ function App() {
 <Route 
     path="/vanitory" 
     element={<Vanitory />} 
+/>
+
+<Route 
+    path="/rack-de-tv" 
+    element={<RackDeTv />} 
 />
 
     </Routes>
