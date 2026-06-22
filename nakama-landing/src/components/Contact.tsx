@@ -12,11 +12,8 @@ function Contact() {
 
         e.preventDefault();
 
-
         const form = e.currentTarget;
-
         const data = new FormData(form);
-
 
         await fetch(
             "https://formsubmit.co/ajax/Info@mobiliariosnakama.com",
@@ -26,11 +23,8 @@ function Contact() {
             }
         );
 
-
         setSent(true);
-
         form.reset();
-
 
         setTimeout(() => {
             setSent(false);
@@ -43,19 +37,15 @@ function Contact() {
 
         <section id="contacto" className="contactSection">
 
-
             <div className="contactContent">
-
 
                 <span>
                     HABLEMOS DE TU PROYECTO
                 </span>
 
-
                 <h2>
                     CONTACTO
                 </h2>
-
 
                 <p>
                     Contanos qué querés construir, diseñar o materializar.
@@ -64,12 +54,21 @@ function Contact() {
                 </p>
 
 
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Roma+1530+Villa+Maipu+Buenos+Aires"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="contactLocation"
+                >
+                    <span>📍</span>
+                    Roma 1530, Villa Maipú, Zona Norte, Buenos Aires
+                </a>
+
 
                 <form
                     onSubmit={handleSubmit}
                     className="contactForm"
                 >
-
 
                     <input
                         type="text"
@@ -78,7 +77,6 @@ function Contact() {
                         required
                     />
 
-
                     <input
                         type="email"
                         name="Email"
@@ -86,13 +84,11 @@ function Contact() {
                         required
                     />
 
-
                     <input
                         type="tel"
                         name="Telefono"
                         placeholder="Teléfono"
                     />
-
 
                     <textarea
                         name="Consulta"
@@ -100,39 +96,29 @@ function Contact() {
                         required
                     />
 
-
                     <input
                         type="hidden"
                         name="_subject"
                         value="Nueva consulta desde la web Nakama"
                     />
 
-
                     <button
                         type="submit"
                         className="primaryButton"
                     >
-
                         ENVIAR CONSULTA
-
                     </button>
 
-
                     {sent && (
-
                         <p className="successMessage">
                             Consulta enviada correctamente.
                         </p>
-
                     )}
-
 
                 </form>
 
 
-
                 <div className="contactButtons">
-
 
                     <a
                         href="https://wa.me/5491135566477"
@@ -140,27 +126,19 @@ function Contact() {
                         rel="noreferrer"
                         className="primaryButton"
                     >
-
                         ESCRIBIR POR WHATSAPP
-
                     </a>
-
 
                     <a
                         href="mailto:Info@mobiliariosnakama.com"
                         className="secondaryButton"
                     >
-
                         ENVIAR EMAIL
-
                     </a>
-
 
                 </div>
 
-
             </div>
-
 
 
             <a
@@ -169,11 +147,8 @@ function Contact() {
                 rel="noreferrer"
                 className="whatsappFloat"
             >
-
                 WhatsApp
-
             </a>
-
 
         </section>
 
