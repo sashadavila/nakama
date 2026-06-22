@@ -16,7 +16,7 @@ import Playroom from "./pages/Playroom";
 import Placards from "./pages/Placards";
 import Habitaciones from "./pages/Habitaciones";
 import Comerciales from "./pages/Comerciales";
-
+import Vanitory from "./pages/Vanitory";
 function Home() {
 
   return (
@@ -104,6 +104,11 @@ function App() {
   element={<Comerciales />} 
 />
 
+
+<Route 
+    path="/vanitory" 
+    element={<Vanitory />} 
+/>
 
     </Routes>
 

@@ -54,7 +54,7 @@ const extraProjects = [
     {
         id:6,
         title:"Vanitori",
-        link:"#",
+        link: "/vanitory",
         image:vanitoyImg,
     },
 

@@ -1,4 +1,5 @@
 import "./gallery.css";
+import GalleryLightbox from "../components/GalleryLightbox";
 
 
 import dormitorio1 from "../assets/coleccion/placard-habitaciones/dormitorio1.jpeg";
@@ -46,31 +47,14 @@ function Habitaciones() {
         <section className="galleryPage">
 
             <h1>
-                HABITACIONES
+                DORMITORIOS
             </h1>
 
 
-            <div className="galleryGrid">
-
-                {
-                    images.map((image, index) => (
-
-                        <div
-                            className="galleryItem"
-                            key={index}
-                        >
-
-                            <img
-                                src={image}
-                                alt={`Habitación ${index + 1}`}
-                            />
-
-                        </div>
-
-                    ))
-                }
-
-            </div>
+            <GalleryLightbox
+                images={images}
+                altPrefix="Dormitorio"
+            />
 
 
         </section>

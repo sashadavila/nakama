@@ -1,4 +1,6 @@
 import "./gallery.css";
+import GalleryLightbox from "../components/GalleryLightbox";
+
 
 import cocina1 from "../assets/coleccion/cocina/4.jpeg";
 
@@ -43,27 +45,11 @@ function Cocinas() {
             </h1>
 
 
-            <div className="galleryGrid">
+            <GalleryLightbox
+                images={images}
+                altPrefix="Cocina"
+            />
 
-                {
-                    images.map((image, index) => (
-
-                        <div
-                            className="galleryItem"
-                            key={index}
-                        >
-
-                            <img
-                                src={image}
-                                alt={`Cocina ${index + 1}`}
-                            />
-
-                        </div>
-
-                    ))
-                }
-
-            </div>
 
         </section>
 

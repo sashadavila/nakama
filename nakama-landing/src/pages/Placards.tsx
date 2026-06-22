@@ -1,4 +1,5 @@
 import "./gallery.css";
+import GalleryLightbox from "../components/GalleryLightbox";
 
 
 import placard1 from "../assets/coleccion/placard-habitaciones/placard1.jpeg";
@@ -13,7 +14,6 @@ import placard9 from "../assets/coleccion/placard-habitaciones/placard (9).jpeg"
 import placard10 from "../assets/coleccion/placard-habitaciones/placard (10).jpeg";
 
 
-
 const images = [
     placard1,
     placard2,
@@ -25,7 +25,6 @@ const images = [
     placard8,
     placard9,
     placard10,
-    
 ];
 
 
@@ -36,32 +35,14 @@ function Placards() {
         <section className="galleryPage">
 
             <h1>
-                PLACARDS
+                PLACARES / VESTIDORES
             </h1>
 
 
-            <div className="galleryGrid">
-
-                {
-                    images.map((image, index) => (
-
-                        <div
-                            className="galleryItem"
-                            key={index}
-                        >
-
-                            <img
-                                src={image}
-                                alt={`Placard ${index + 1}`}
-                            />
-
-                        </div>
-
-                    ))
-
-                }
-
-            </div>
+            <GalleryLightbox
+                images={images}
+                altPrefix="Placard"
+            />
 
 
         </section>

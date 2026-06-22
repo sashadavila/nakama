@@ -1,4 +1,6 @@
 import "./gallery.css";
+import GalleryLightbox from "../components/GalleryLightbox";
+
 
 import play1 from "../assets/coleccion/playroom/playroom (1).jpeg";
 import play2 from "../assets/coleccion/playroom/playroom (2).jpeg";
@@ -45,31 +47,14 @@ function Playroom() {
         <section className="galleryPage">
 
             <h1>
-                PLAYROOM
+                PLAY ROOM
             </h1>
 
 
-            <div className="galleryGrid">
-
-                {
-                    images.map((image, index) => (
-
-                        <div 
-                            className="galleryItem"
-                            key={index}
-                        >
-
-                            <img 
-                                src={image}
-                                alt={`Playroom ${index + 1}`}
-                            />
-
-                        </div>
-
-                    ))
-                }
-
-            </div>
+            <GalleryLightbox
+                images={images}
+                altPrefix="Playroom"
+            />
 
 
         </section>

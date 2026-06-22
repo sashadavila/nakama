@@ -1,4 +1,6 @@
 import "./gallery.css";
+import GalleryLightbox from "../components/GalleryLightbox";
+
 
 import comercial1 from "../assets/coleccion/placard-habitaciones/comercial1.jpeg";
 import comercial2 from "../assets/coleccion/placard-habitaciones/comercial2.jpeg";
@@ -18,6 +20,7 @@ import comercial15 from "../assets/coleccion/placard-habitaciones/comercial15.jp
 import comercial16 from "../assets/coleccion/placard-habitaciones/comercial16.jpeg";
 import comercial17 from "../assets/coleccion/placard-habitaciones/comercial17.jpeg";
 import comercial18 from "../assets/coleccion/placard-habitaciones/comercial18.jpeg";
+
 
 const images = [
     comercial1,
@@ -40,20 +43,27 @@ const images = [
     comercial18,
 ];
 
+
 function Comerciales() {
+
     return (
+
         <section className="galleryPage">
+
             <h1>COMERCIALES</h1>
 
-            <div className="galleryGrid">
-                {images.map((image, index) => (
-                    <div className="galleryItem" key={index}>
-                        <img src={image} alt={`Comercial ${index + 1}`} />
-                    </div>
-                ))}
-            </div>
+
+            <GalleryLightbox
+                images={images}
+                altPrefix="Comercial"
+            />
+
+
         </section>
+
     );
+
 }
+
 
 export default Comerciales;
