@@ -6,7 +6,6 @@ import dormitorioImg from "../assets/coleccion/habitaciones/dormitorioportada.jp
 import playroomImg from "../assets/coleccion/playroom/PlayRoomsportada.jpeg";
 import rackImg from "../assets/coleccion/rackdetv/Rack TV0.jpg";
 import vanitoryImg from "../assets/coleccion/vanitory/Vanitoryportada.jpeg";
-import comercialesImg from "../assets/coleccion/comerciales/comerciales.jpg";
 
 
 const mainProjects = [
@@ -50,12 +49,7 @@ const extraProjects = [
         link: "/vanitory",
         image: vanitoryImg,
     },
-    {
-        id: 7,
-        title: "Comerciales",
-        link: "/comerciales",
-        image: comercialesImg,
-    },
+
 ];
 
 
